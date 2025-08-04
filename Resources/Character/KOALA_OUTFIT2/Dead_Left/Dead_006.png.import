@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ik4pac1kyvx0"
-path.s3tc="res://.godot/imported/FA_KOALA_Dead_008.png-6da306e1e3d46878140f0d62be92ebfe.s3tc.ctex"
+uid="uid://1sk2iimr5tt2"
+path.s3tc="res://.godot/imported/Dead_006.png-0fe75016ebe727a2d2609f6723395179.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Resources/Character/KOALA_OUTFIT2/Dead_Left/FA_KOALA_Dead_008.png"
-dest_files=["res://.godot/imported/FA_KOALA_Dead_008.png-6da306e1e3d46878140f0d62be92ebfe.s3tc.ctex"]
+source_file="res://Resources/Character/KOALA_OUTFIT2/Dead_Left/Dead_006.png"
+dest_files=["res://.godot/imported/Dead_006.png-0fe75016ebe727a2d2609f6723395179.s3tc.ctex"]
 
 [params]
 
