@@ -1,4 +1,4 @@
-[gd_scene load_steps=125 format=3 uid="uid://dq25op4xq6fvi"]
+[gd_scene load_steps=127 format=3 uid="uid://dq25op4xq6fvi"]
 
 [ext_resource type="Texture2D" uid="uid://bgggvshlk7lcy" path="res://Resources/Character/KOALA_OUTFIT2/01-Idle/01-Idle/FA_KOALA_Idle_000.png" id="1_5myum"]
 [ext_resource type="Script" uid="uid://b56a2blnqdy13" path="res://Resources/Player/Player.cs" id="1_hg656"]
@@ -558,9 +558,32 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Player" type="CharacterBody3D"]
+[sub_resource type="Animation" id="Animation_rp7kn"]
+length = 0.001
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yq6j1"]
+_data = {
+&"RESET": SubResource("Animation_rp7kn")
+}
+
+[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("animationPlayerNode", "animationSprite3DNode", "sprite3DNode")]
 script = ExtResource("1_hg656")
+animationPlayerNode = NodePath("Sprite3D/AnimationPlayer")
+animationSprite3DNode = NodePath("AnimatedSprite3D")
+sprite3DNode = NodePath("Sprite3D")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+visible = false
 sprite_frames = SubResource("SpriteFrames_o4vjf")
 animation = &"Idle"
+frame = 7
+frame_progress = 0.718854
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+texture = ExtResource("1_5myum")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite3D"]
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_yq6j1")
+}
