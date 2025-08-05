@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://dq25op4xq6fvi"]
+[gd_scene load_steps=53 format=3 uid="uid://dq25op4xq6fvi"]
 
 [ext_resource type="Script" uid="uid://b56a2blnqdy13" path="res://Resources/Player/Player.cs" id="1_hg656"]
 [ext_resource type="Texture2D" uid="uid://bapvv32k2rcif" path="res://Resources/Character/KOALA_OUTFIT2/Idle_Left/FA_KOALA_Idle_000.png" id="2_0r88w"]
@@ -25,6 +25,30 @@
 [ext_resource type="Texture2D" uid="uid://b6lpe1ud4etqp" path="res://Resources/Character/KOALA_OUTFIT2/Idle_Right/FA_KOALA_Idle_009.png" id="23_mjryb"]
 [ext_resource type="Texture2D" uid="uid://dgh2kdx53d410" path="res://Resources/Character/KOALA_OUTFIT2/Idle_Right/FA_KOALA_Idle_010.png" id="24_07eep"]
 [ext_resource type="Texture2D" uid="uid://bub620bi4857t" path="res://Resources/Character/KOALA_OUTFIT2/Idle_Right/FA_KOALA_Idle_011.png" id="25_gh73o"]
+[ext_resource type="Texture2D" uid="uid://cniy6mkrk1von" path="res://Resources/Character/KOALA_OUTFIT2/Walk_Left/FA_KOALA_Walk_000.png" id="26_ai7er"]
+[ext_resource type="Texture2D" uid="uid://bxubtb0v0q35c" path="res://Resources/Character/KOALA_OUTFIT2/Walk_Left/FA_KOALA_Walk_001.png" id="27_ghiul"]
+[ext_resource type="Texture2D" uid="uid://o83apxxmq70g" path="res://Resources/Character/KOALA_OUTFIT2/Walk_Left/FA_KOALA_Walk_002.png" id="28_shid4"]
+[ext_resource type="Texture2D" uid="uid://5sqtomyd3guj" path="res://Resources/Character/KOALA_OUTFIT2/Walk_Left/FA_KOALA_Walk_003.png" id="29_o2wwr"]
+[ext_resource type="Texture2D" uid="uid://dwki753gufdve" path="res://Resources/Character/KOALA_OUTFIT2/Walk_Left/FA_KOALA_Walk_004.png" id="30_3fsur"]
+[ext_resource type="Texture2D" uid="uid://45myhaylhuke" path="res://Resources/Character/KOALA_OUTFIT2/Walk_Left/FA_KOALA_Walk_005.png" id="31_lqfdu"]
+[ext_resource type="Texture2D" uid="uid://chae1ohg54yey" path="res://Resources/Character/KOALA_OUTFIT2/Walk_Left/FA_KOALA_Walk_006.png" id="32_xbcd0"]
+[ext_resource type="Texture2D" uid="uid://b4we5l8mr2twy" path="res://Resources/Character/KOALA_OUTFIT2/Walk_Left/FA_KOALA_Walk_007.png" id="33_yeku2"]
+[ext_resource type="Texture2D" uid="uid://deu57lvv4dwsw" path="res://Resources/Character/KOALA_OUTFIT2/Walk_Left/FA_KOALA_Walk_008.png" id="34_h5cgl"]
+[ext_resource type="Texture2D" uid="uid://dusirwyn7trg1" path="res://Resources/Character/KOALA_OUTFIT2/Walk_Left/FA_KOALA_Walk_009.png" id="35_3sqk4"]
+[ext_resource type="Texture2D" uid="uid://dbk8itknxr8yx" path="res://Resources/Character/KOALA_OUTFIT2/Walk_Left/FA_KOALA_Walk_010.png" id="36_l8n2b"]
+[ext_resource type="Texture2D" uid="uid://cgymc1q45vcv0" path="res://Resources/Character/KOALA_OUTFIT2/Walk_Left/FA_KOALA_Walk_011.png" id="37_unts5"]
+[ext_resource type="Texture2D" uid="uid://j06q2yi2vq8j" path="res://Resources/Character/KOALA_OUTFIT2/Walk_Right/FA_KOALA_Walk_000.png" id="38_k6sir"]
+[ext_resource type="Texture2D" uid="uid://dhh0ikqt3i807" path="res://Resources/Character/KOALA_OUTFIT2/Walk_Right/FA_KOALA_Walk_001.png" id="39_a5gss"]
+[ext_resource type="Texture2D" uid="uid://ctleg3abyawso" path="res://Resources/Character/KOALA_OUTFIT2/Walk_Right/FA_KOALA_Walk_002.png" id="40_nqkt5"]
+[ext_resource type="Texture2D" uid="uid://ckgjtorns382h" path="res://Resources/Character/KOALA_OUTFIT2/Walk_Right/FA_KOALA_Walk_003.png" id="41_53xw5"]
+[ext_resource type="Texture2D" uid="uid://b6wgl4e7fsugl" path="res://Resources/Character/KOALA_OUTFIT2/Walk_Right/FA_KOALA_Walk_004.png" id="42_tfr5g"]
+[ext_resource type="Texture2D" uid="uid://cl51eoa0dwblg" path="res://Resources/Character/KOALA_OUTFIT2/Walk_Right/FA_KOALA_Walk_005.png" id="43_y8d5v"]
+[ext_resource type="Texture2D" uid="uid://dauyrvinhxpsk" path="res://Resources/Character/KOALA_OUTFIT2/Walk_Right/FA_KOALA_Walk_006.png" id="44_tjwm5"]
+[ext_resource type="Texture2D" uid="uid://drg7ps4fig3im" path="res://Resources/Character/KOALA_OUTFIT2/Walk_Right/FA_KOALA_Walk_007.png" id="45_xhajo"]
+[ext_resource type="Texture2D" uid="uid://bgh6wfprw1jo" path="res://Resources/Character/KOALA_OUTFIT2/Walk_Right/FA_KOALA_Walk_008.png" id="46_g468w"]
+[ext_resource type="Texture2D" uid="uid://bw1tx2yb3h3tq" path="res://Resources/Character/KOALA_OUTFIT2/Walk_Right/FA_KOALA_Walk_009.png" id="47_n1kvl"]
+[ext_resource type="Texture2D" uid="uid://b7y0m765fno7q" path="res://Resources/Character/KOALA_OUTFIT2/Walk_Right/FA_KOALA_Walk_010.png" id="48_yq2ub"]
+[ext_resource type="Texture2D" uid="uid://mxfw4con6i4i" path="res://Resources/Character/KOALA_OUTFIT2/Walk_Right/FA_KOALA_Walk_011.png" id="49_d3ey4"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tvlcx"]
 animations = [{
@@ -109,6 +133,88 @@ animations = [{
 "loop": true,
 "name": &"Idle_Right",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_ai7er")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_ghiul")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_shid4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_o2wwr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_3fsur")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_lqfdu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_xbcd0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_yeku2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_h5cgl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_3sqk4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_l8n2b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_unts5")
+}],
+"loop": true,
+"name": &"Walk_Left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("38_k6sir")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_a5gss")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_nqkt5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_53xw5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_tfr5g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_y8d5v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_tjwm5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_xhajo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_g468w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_n1kvl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_yq2ub")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_d3ey4")
+}],
+"loop": true,
+"name": &"Walk_Right",
+"speed": 5.0
 }]
 
 [sub_resource type="Animation" id="Animation_rp7kn"]
@@ -128,9 +234,10 @@ sprite3DNode = NodePath("Sprite3D")
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 visible = false
 sprite_frames = SubResource("SpriteFrames_tvlcx")
-animation = &"Idle_Right"
+animation = &"Walk_Left"
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
+texture_filter = 0
 texture = ExtResource("2_0r88w")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite3D"]

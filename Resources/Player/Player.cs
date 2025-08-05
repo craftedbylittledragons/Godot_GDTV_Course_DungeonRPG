@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using System.Runtime.CompilerServices;
 
 public partial class Player : CharacterBody3D
 {
@@ -9,8 +10,8 @@ public partial class Player : CharacterBody3D
     [Export] private Sprite3D sprite3DNode;
      
     private Vector2 direction = new();
-    
-    private String last_known_direction ="left";
+    private bool DEBUG = false;
+    private String last_known_direction = GameConstants.DIRECTION_LEFT;
     private int runBALOnce = 0;
 
     public override void _Ready()
@@ -20,25 +21,25 @@ public partial class Player : CharacterBody3D
             BuildAnimationLibrary();
             runBALOnce = runBALOnce + 1;
         }
-        AnimationFunction("Idle_Left");
+        AnimationFunction(GameConstants.ANIM_IDLE_LEFT);
     }
 
     public void BuildAnimationLibrary()// Create a new animation
     {
-         SpriteFrames spriteFrames = animationSprite3DNode.SpriteFrames;
+        SpriteFrames spriteFramesList = animationSprite3DNode.SpriteFrames;
         // Example: Print all animation names for debuging purposes... 
-        foreach (string animName in spriteFrames.GetAnimationNames())
+        foreach (string animName in spriteFramesList.GetAnimationNames())
         {
-            GD.Print("Building Animation Library: " + animName);
+            if (DEBUG == true) { GD.Print("Building Animation Library: " + animName); }
 
             // Example: Get number of frames in "walk" animation
-            int frameCount = spriteFrames.GetFrameCount(animName);
-            GD.Print(animName + " has " + frameCount + " frames.");
+            int frameCount = spriteFramesList.GetFrameCount(animName);
+            if (DEBUG == true) { GD.Print(animName + " has " + frameCount + " frames."); }
             Texture2D[] frames = new Texture2D[frameCount];
 
             // Add a new animation to the animation player.
-            Animation myAnim = new Animation();        
-            GD.Print("Created new animation [ " + animName  + " ]");
+            Animation myAnim = new Animation();
+            if (DEBUG == true) { GD.Print("Created new animation [ " + animName + " ]"); }
             // Set the time length for the whole animation
             myAnim.Length = 1.0f;
             myAnim.LoopMode = Animation.LoopModeEnum.Linear;
@@ -47,35 +48,34 @@ public partial class Player : CharacterBody3D
             float frameTime = myAnim.Length / frameCount;
 
             // Add track to the animation player (just like the editor)
-            int trackIdx = myAnim.AddTrack(Animation.TrackType.Value);            
-            GD.Print("AddTrack [ " + animName  + " ]");
+            int trackIdx = myAnim.AddTrack(Animation.TrackType.Value);
+            if (DEBUG == true) { GD.Print("AddTrack [ " + animName + " ]"); }
 
             // Set the track to use textures (just like the editor)
-            myAnim.TrackSetPath(trackIdx, sprite3DNode.GetPath() + ":texture");        
-            GD.Print("TrackSetPath [ " + animName  + " ]");
+            myAnim.TrackSetPath(trackIdx, sprite3DNode.GetPath() + ":texture");
+            if (DEBUG == true) { GD.Print("TrackSetPath [ " + animName + " ]"); }
 
             // bulid the animations key frames from the selected sprite frames
             for (int i = 0; i < frameCount; i++)
-            {
-                Texture2D FrameAnim = spriteFrames.GetFrameTexture(animName, i);
+            { 
+                Texture2D FrameAnim = spriteFramesList.GetFrameTexture(animName, i);
                 int trackIndex = myAnim.GetTrackCount() - 1;
                 frames[i] = FrameAnim;
                 myAnim.TrackInsertKey(trackIndex, i * frameTime, frames[i]);
-            }            
-            GD.Print("Added key frames to track. [ " + animName  + " ]");
+            }
+            if (DEBUG == true) { GD.Print("Added key frames to track. [ " + animName + " ]"); }
 
             // Create and assign a new AnimationLibrary
             var animLibrary = new AnimationLibrary();
             animLibrary.AddAnimation(animName, myAnim);
-            GD.Print("AddAnimation [ " + animName  + " ]");
+            if (DEBUG == true) { GD.Print("AddAnimation [ " + animName + " ]"); }
             // Register the AnimationLibrary under the AnimationPlayer
             animationPlayerNode.AddAnimationLibrary(animName, animLibrary);
-            GD.Print("AddAnimationLibrary [ " + animName  + " ] ");
+            if (DEBUG == true) { GD.Print("AddAnimationLibrary [ " + animName + " ] "); }
             // animation is ready to play at a later time.            
-            GD.Print("Animation Library is ready for [ " + animName  + " ] ");
-            GD.Print(" **************************************************** ");
+            if (DEBUG == true) { GD.Print("Animation Library is ready for [ " + animName + " ] "); }
+            if (DEBUG == true) { GD.Print(" **************************************************** "); }
         }         
-
     }
 
 
@@ -114,23 +114,23 @@ public partial class Player : CharacterBody3D
         direction = Input.GetVector("MoveLeft", "MoveRight", "MoveForward", "MoveBackward");
         if (direction > Vector2.Zero)
         {
-            AnimationFunction("Walk_Right");
-            last_known_direction = "right";
+            AnimationFunction(GameConstants.ANIM_WALK_RIGHT);
+            last_known_direction = GameConstants.DIRECTION_RIGHT;
         }
         else if (direction < Vector2.Zero)
         {
-            AnimationFunction("Walk_Left");
-            last_known_direction = "left";
+            AnimationFunction(GameConstants.ANIM_WALK_LEFT);
+            last_known_direction = GameConstants.DIRECTION_LEFT;
         }
         else
         {
-            if (last_known_direction == "right")
+            if (last_known_direction == GameConstants.DIRECTION_RIGHT)
             {
-                AnimationFunction("Idle_Right");
+                AnimationFunction(GameConstants.ANIM_IDLE_RIGHT);
             }
             else
             { 
-                AnimationFunction("Idle_Left");
+                AnimationFunction(GameConstants.ANIM_IDLE_LEFT);
             }
         }
     }
