@@ -10,9 +10,9 @@ config_version=5
 
 [application]
 
-config/name="Godot 4.4.1  Dungeon 2.5 D RPG Course"
+config/name="Godot 4.4.1  Dungeon 2.5 D RPG Course Branch V1"
 run/main_scene="uid://nvcr1h7vbehj"
-config/features=PackedStringArray("4.4", "C#", "Forward Plus")
+config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="uid://brh2xyrxsnn0d"
 
 [dotnet]
